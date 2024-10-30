@@ -1,4 +1,4 @@
-# OpenAI-Translator
+# LLM-Translator
 
 <p align="center">
     <br> <a href="README.md"> English </a> | 中文
@@ -43,7 +43,7 @@ OpenAI 翻译器目前还处于早期开发阶段，我正在积极地添加更�
 
 ### 环境准备
 
-1.克隆仓库 `git clone git@github.com:DjangoPeng/openai-translator.git`。
+1.克隆仓库 `git clone git@github.com:DjangoPeng/LLM-Translator.git`。
 
 2.OpenAI-翻译器 需要 Python 3.10 或更高版本。使用 `pip install -r requirements.txt` 安装依赖项。
 
@@ -51,7 +51,7 @@ OpenAI 翻译器目前还处于早期开发阶段，我正在积极地添加更�
 
 ### 使用示例
 
-您可以通过指定配置文件或提供命令行参数来使用 OpenAI-Translator 工具。
+您可以通过指定配置文件或提供命令行参数来使用 LLM-Translator 工具。
 
 #### 使用配置文件
 

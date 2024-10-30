@@ -1,4 +1,4 @@
-# OpenAI-Translator
+# LLM-Translator
 
 <p align="center">
     <br> English | <a href="README-CN.md">中文</a>
@@ -43,15 +43,15 @@ The OpenAI Translator is still in its early stages of development, and I'm activ
 
 ### Environment Setup
 
-1.Clone the repository `git clone git@github.com:DjangoPeng/openai-translator.git`.
+1.Clone the repository `git clone git@github.com:DjangoPeng/LLM-Translator.git`.
 
-2.The `OpenAI-Translator` requires Python 3.10 or later. Install the dependencies with `pip install -r requirements.txt`.
+2.The `LLM-Translator` requires Python 3.10 or later. Install the dependencies with `pip install -r requirements.txt`.
 
 3.Set up your OpenAI API key(`$OPENAI_API_KEY`). You can either add it to your environment variables or specify it in the config.yaml file.
 
 ### Usage
 
-You can use OpenAI-Translator either by specifying a configuration file or by providing command-line arguments.
+You can use LLM-Translator either by specifying a configuration file or by providing command-line arguments.
 
 #### Using a configuration file:
 
