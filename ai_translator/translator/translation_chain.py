@@ -1,11 +1,12 @@
 from langchain_openai import ChatOpenAI
+from langchain_community.chat_models.zhipuai import ChatZhipuAI
 
 from utils import LOG
 from langchain_core.prompts import ChatPromptTemplate, HumanMessagePromptTemplate, SystemMessagePromptTemplate
 
 
 class TranslationChain:
-    def __init__(self, model_name: str = "gpt-4o-mini", verbose: bool = True):
+    def __init__(self, model_name: str = "gpt-4o-mini", model_provider: str = "openai", verbose: bool = True):
 
         # 翻译任务指令始终由 System 角色承担
         template = (
@@ -23,8 +24,13 @@ class TranslationChain:
             [system_message_prompt, human_message_prompt]
         )
 
-        # 为了翻译结果的稳定性，将 temperature 设置为 0
-        chat = ChatOpenAI(model_name=model_name, temperature=0, verbose=verbose)
+        # 根据不同的模型提供商选择对应的模型
+        if model_provider == "openai":
+            chat = ChatOpenAI(model_name=model_name, temperature=0, verbose=verbose)
+        elif model_provider == "zhipuai":
+            chat = ChatZhipuAI(model_name=model_name, temperature=0)
+        else:
+            raise ValueError(f"Unsupported model provider: {model_provider}")
 
         self.chain = chat_prompt_template | chat
 

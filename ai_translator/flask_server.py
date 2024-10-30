@@ -19,11 +19,20 @@ def translation():
         source_language = request.form.get('source_language', 'English')
         target_language = request.form.get('target_language', 'Chinese')
         style = request.form.get('style', 'standard')
+        model_name = request.form.get('model_name', 'gpt-4o-mini')
+        model_provider = request.form.get('model_provider', 'openai')
 
         LOG.debug(f"[input_file]\n{input_file}")
         LOG.debug(f"[input_file.filename]\n{input_file.filename}")
 
         if input_file and input_file.filename:
+            # 根据用户选择更新 Translator 实例
+            global Translator
+            Translator = PDFTranslator(
+                model_name=model_name,
+                model_provider=model_provider
+            )
+
             # # 创建临时文件
             input_file_path = TEMP_FILE_DIR + input_file.filename
             LOG.debug(f"[input_file_path]\n{input_file_path}")
@@ -65,7 +74,10 @@ def initialize_translator():
     config.initialize(args)
     # 实例化 PDFTranslator 类，并调用 translate_pdf() 方法
     global Translator
-    Translator = PDFTranslator(config.model_name)
+    Translator = PDFTranslator(
+        model_name=config.model_name,
+        model_provider=config.model_provider
+    )
 
 
 if __name__ == "__main__":

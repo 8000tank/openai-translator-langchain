@@ -1,4 +1,5 @@
 model_name: "gpt-4o-mini"
+model_provider: "openai"
 input_file: "tests/test.pdf"
 output_file_format: "markdown"
 source_language: "English"

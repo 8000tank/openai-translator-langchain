@@ -5,8 +5,11 @@ from translator.translation_chain import TranslationChain
 
 
 class PDFTranslator:
-    def __init__(self, model_name: str):
-        self.translate_chain = TranslationChain(model_name)
+    def __init__(self, model_name: str = "gpt-4o-mini", model_provider: str = "openai"):
+        self.translation_chain = TranslationChain(
+            model_name=model_name,
+            model_provider=model_provider
+        )
         self.pdf_parser = PDFParser()
         self.writer = Writer()
 
@@ -22,7 +25,7 @@ class PDFTranslator:
 
         for page_idx, page in enumerate(self.book.pages):
             for content_idx, content in enumerate(page.contents):
-                translation, status = self.translate_chain.run(
+                translation, status = self.translation_chain.run(
                     content,
                     source_language,
                     target_language,

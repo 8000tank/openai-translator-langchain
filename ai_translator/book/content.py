@@ -52,16 +52,28 @@ class TableContent(Content):
             if not isinstance(translation, str):
                 raise ValueError(f"Invalid translation type. Expected str, but got {type(translation)}")
 
+            # 将中文方括号替换为英文方括号
+            translation = translation.replace('【', '[').replace('】', ']')
+
             LOG.debug(f"[translation]\n{translation}")
-            # Extract column names from the first set of brackets
-            header = translation.split(']')[0][1:].split(', ')
-            # Extract data rows from the remaining brackets
-            data_rows = translation.split('] ')[1:]
-            # Replace Chinese punctuation and split each row into a list of values
-            data_rows = [re.split('[,、]\s*', row[1:-1]) for row in data_rows]
-            # Create a DataFrame using the extracted header and data
+
+            # 提取表头和数据
+            parts = translation.split(']')
+            if len(parts) < 2:
+                raise ValueError("Invalid table format")
+
+            # 处理表头：支持逗号、顿号等多种分隔符
+            header = re.split('[,、，]\s*', parts[0][1:].strip())
+
+            # 处理数据行：支持多种分隔符和格式
+            data_rows = parts[1:]
+            # 清理每行数据并用多种分隔符分割
+            data_rows = [re.split('[,、，]\s*', row.strip().strip('[]')) for row in data_rows if row.strip()]
+
+            # 创建 DataFrame
             translated_df = pd.DataFrame(data_rows, columns=header)
             LOG.debug(f"[translated_df]\n{translated_df}")
+
             self.translation = translated_df
             self.status = status
         except Exception as e:
