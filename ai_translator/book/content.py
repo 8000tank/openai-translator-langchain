@@ -1,9 +1,8 @@
 import pandas as pd
-
+import re
 from enum import Enum, auto
 from PIL import Image as PILImage
 from utils import LOG
-from io import StringIO
 
 
 class ContentType(Enum):
@@ -59,7 +58,7 @@ class TableContent(Content):
             # Extract data rows from the remaining brackets
             data_rows = translation.split('] ')[1:]
             # Replace Chinese punctuation and split each row into a list of values
-            data_rows = [row[1:-1].split(', ') for row in data_rows]
+            data_rows = [re.split('[,、]\s*', row[1:-1]) for row in data_rows]
             # Create a DataFrame using the extracted header and data
             translated_df = pd.DataFrame(data_rows, columns=header)
             LOG.debug(f"[translated_df]\n{translated_df}")

@@ -1,0 +1,6 @@
+logs/translation.log
+
+# 排除所有的 __pycache__ 目录
+**/__pycache__/
+# 同时排除Python的编译文件
+*.py[cod]
