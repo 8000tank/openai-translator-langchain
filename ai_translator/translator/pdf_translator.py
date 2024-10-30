@@ -15,15 +15,19 @@ class PDFTranslator:
                       output_file_format: str = 'markdown',
                       source_language: str = "English",
                       target_language: str = 'Chinese',
+                      style: str = "standard",
                       pages: Optional[int] = None):
 
         self.book = self.pdf_parser.parse_pdf(input_file, pages)
 
         for page_idx, page in enumerate(self.book.pages):
             for content_idx, content in enumerate(page.contents):
-                # Translate content.original
-                translation, status = self.translate_chain.run(content, source_language, target_language)
-                # Update the content in self.book.pages directly
+                translation, status = self.translate_chain.run(
+                    content,
+                    source_language,
+                    target_language,
+                    style
+                )
                 self.book.pages[page_idx].contents[content_idx].set_translation(translation, status)
 
         return self.writer.save_translated_book(self.book, output_file_format)

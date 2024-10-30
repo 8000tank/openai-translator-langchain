@@ -1,8 +1,7 @@
 from translator import PDFTranslator, TranslationConfig
-from utils import ArgumentParser, LOG
+from utils import ArgumentParser
 import sys
 import os
-
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -17,4 +16,9 @@ if __name__ == "__main__":
 
     # 实例化 PDFTranslator 类，并调用 translate_pdf() 方法
     translator = PDFTranslator(config.model_name)
-    translator.translate_pdf(config.input_file, config.output_file_format, pages=None)
+    translator.translate_pdf(
+        config.input_file,
+        config.output_file_format,
+        style=config.style,
+        pages=None
+    )

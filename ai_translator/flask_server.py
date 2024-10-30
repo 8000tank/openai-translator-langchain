@@ -18,6 +18,7 @@ def translation():
         input_file = request.files['input_file']
         source_language = request.form.get('source_language', 'English')
         target_language = request.form.get('target_language', 'Chinese')
+        style = request.form.get('style', 'standard')
 
         LOG.debug(f"[input_file]\n{input_file}")
         LOG.debug(f"[input_file.filename]\n{input_file.filename}")
@@ -33,7 +34,9 @@ def translation():
             output_file_path = Translator.translate_pdf(
                 input_file=input_file_path,
                 source_language=source_language,
-                target_language=target_language)
+                target_language=target_language,
+                style=style
+            )
 
             # 移除临时文件
             # os.remove(input_file_path)

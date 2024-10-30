@@ -10,7 +10,7 @@ class TranslationChain:
         # 翻译任务指令始终由 System 角色承担
         template = (
             """You are a translation expert, proficient in various languages. \n
-            Translates {source_language} to {target_language}."""
+            Use the {style} style to translates from {source_language} to {target_language}."""
         )
         system_message_prompt = SystemMessagePromptTemplate.from_template(template)
 
@@ -28,13 +28,14 @@ class TranslationChain:
 
         self.chain = chat_prompt_template | chat
 
-    def run(self, text: str, source_language: str, target_language: str) -> (str, bool):
+    def run(self, text: str, source_language: str, target_language: str, style: str = "standard") -> (str, bool):
         result = ""
         try:
             result = self.chain.invoke({
                 "text": text,
                 "source_language": source_language,
                 "target_language": target_language,
+                "style": style
             })
         except Exception as e:
             LOG.error(f"An error occurred during translation: {e}")
