@@ -19,6 +19,12 @@ In the current landscape, there's a lack of non-commercial yet efficient PDF tra
 
 The LLM Translator is still in its early stages of development, and I'm actively working on adding more features and improving its performance. We appreciate any feedback or contributions!
 
+![The_Gradio_GUI](images/sample_image_2.png)
+
+<p align="center">
+    <em>Gradio Interface</em>
+</p>
+
 ![The_Old_Man_of_the_Sea](images/sample_image_0.png)
 
 <p align="center">
@@ -43,7 +49,7 @@ The LLM Translator is still in its early stages of development, and I'm actively
 
 ### Environment Setup
 
-1.Clone the repository `git clone git@github.com:DjangoPeng/LLM-Translator.git`.
+1.Clone the repository `git clone https://github.com/8000tank/openai-translator-langchain.git`.
 
 2.The `LLM-Translator` requires Python 3.10 or later. Install the dependencies with `pip install -r requirements.txt`.
 

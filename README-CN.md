@@ -9,7 +9,7 @@
 
 ## 介绍
 
-LLM 翻译器是一个使用 AI 技术将英文 PDF 书籍翻译成中文的工具。这个工具使用了大型语言模型 (LLMs)，如 ChatGLM 的 glm-4 和 OpenAI 的 gpt-4o-mini 来进行翻译。它是用 Python 构建的，并且具有灵活、模块化和面向对象的设计。本项目基于[原始项目](https://github.com/DjangoPeng/openai-quickstart/tree/main/langchain/openai-translator)，在其基础上进行了LCEL改造和功能改进（增加智谱AI模型和风格翻译）。
+LLM 翻译器是一个使用 AI 技术将英文 PDF 书籍翻译成中文的工具。这个工具使用了大型语言模型 (LLMs)，如 ChatGLM 的 glm-4 和 OpenAI 的 gpt-4o-mini 来进行翻译。它是用 Python 构建的，并且具有灵活、模块化和面向对象的设计。本项目基于[原始项目](https://github.com/DjangoPeng/openai-quickstart/tree/main/langchain/openai-translator)，在其基础上进行了 LCEL 改造和功能改进（增加智谱 AI 模型和风格翻译）。
 
 ## 为什么做这个项目
 
@@ -18,6 +18,12 @@ LLM 翻译器是一个使用 AI 技术将英文 PDF 书籍翻译成中文的工�
 ## 示例结果
 
 LLM 翻译器目前还处于早期开发阶段，我正在积极地添加更多功能和改进其性能。我们非常欢迎任何反馈或贡献！
+
+![The_Gradio_GUI](images/sample_image_2.png)
+
+<p align="center">
+    <em>Gradio界面</em>
+</p>
 
 ![The_Old_Man_of_the_Sea](images/sample_image_0.png)
 
@@ -43,7 +49,7 @@ LLM 翻译器目前还处于早期开发阶段，我正在积极地添加更多�
 
 ### 环境准备
 
-1.克隆仓库 `git clone git@github.com:DjangoPeng/LLM-Translator.git`。
+1.克隆仓库 `git clone https://github.com/8000tank/openai-translator-langchain.git`。
 
 2.LLM 翻译器 需要 Python 3.10 或更高版本。使用 `pip install -r requirements.txt` 安装依赖项。
 
