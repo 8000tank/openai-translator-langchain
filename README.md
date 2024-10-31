@@ -9,7 +9,7 @@
 
 ## Introduction
 
-LLM Translator is an AI-powered translation tool designed to translate English PDF books to Chinese. The tool leverages large language models (LLMs) like ChatGLM and OpenAI's gpt-4o-mini for translation. It's built in Python and has a flexible, modular, and object-oriented design.
+LLM Translator is an AI-powered translation tool designed to translate English PDF books to Chinese. The tool leverages large language models (LLMs) like ChatGLM and OpenAI's gpt-4o-mini for translation. It's built in Python and has a flexible, modular, and object-oriented design. The project is based on the original project, https://github.com/DjangoPeng/openai-quickstart/tree/main/langchain/openai-translator, Based on it, LCEL transformation and functional improvements (adding the ZhiPu AI model and style translation) are carried out.
 
 ## Why this project
 
