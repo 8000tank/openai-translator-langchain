@@ -4,12 +4,12 @@
     <br> <a href="README.md"> English </a> | 中文
 </p>
 <p align="center">
-    <em>所有的代码和文档完全由 OpenAI 的 GPT-4 模型生成</em>
+    <em>大部分代码和文档由OpenAI的GPT-4及Anthropic的Claude-3.5-sonnet模型生成</em>
 </p>
 
 ## 介绍
 
-OpenAI 翻译器是一个使用 AI 技术将英文 PDF 书籍翻译成中文的工具。这个工具使用了大型语言模型 (LLMs)，如 ChatGLM 和 OpenAI 的 gpt-4o-mini 来进行翻译。它是用 Python 构建的，并且具有灵活、模块化和面向对象的设计。
+LLM 翻译器是一个使用 AI 技术将英文 PDF 书籍翻译成中文的工具。这个工具使用了大型语言模型 (LLMs)，如 ChatGLM 的 glm-4 和 OpenAI 的 gpt-4o-mini 来进行翻译。它是用 Python 构建的，并且具有灵活、模块化和面向对象的设计。
 
 ## 为什么做这个项目
 
@@ -17,7 +17,7 @@ OpenAI 翻译器是一个使用 AI 技术将英文 PDF 书籍翻译成中文的�
 
 ## 示例结果
 
-OpenAI 翻译器目前还处于早期开发阶段，我正在积极地添加更多功能和改进其性能。我们非常欢迎任何反馈或贡献！
+LLM 翻译器目前还处于早期开发阶段，我正在积极地添加更多功能和改进其性能。我们非常欢迎任何反馈或贡献！
 
 ![The_Old_Man_of_the_Sea](images/sample_image_0.png)
 
