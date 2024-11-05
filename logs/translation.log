@@ -1,185 +1,11 @@
-2024-10-30 10:54:43.945 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English
-alphabet at least once. Pangrams are often used to test fonts, keyboards, and other text-related
-tools. In addition to English, there are pangrams in many other languages. Some pangrams are more
-difficult to construct due to the unique characteristics of the language.
-Table Testing
-2024-10-30 10:54:43.952 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 10:54:54.452 | DEBUG    | book.content:set_translation:54 - [translation]
-[水果，颜色，价格（美元）] [苹果，红色，1.20] [香蕉，黄色，0.50] [橙子，橙色，0.80] [草莓，红色，2.50] [蓝莓，蓝色，3.00] [猕猴桃，绿色，1.00] [芒果，橙色，1.50] [葡萄，紫色，2.00]
-2024-10-30 10:54:54.458 | DEBUG    | book.content:set_translation:63 - [translated_df]
-  水果，颜色，价格（美元）
-0    苹果，红色，1.2
-1    香蕉，黄色，0.5
-2    橙子，橙色，0.8
-3    草莓，红色，2.5
-4    蓝莓，蓝色，3.0
-5   猕猴桃，绿色，1.0
-6    芒果，橙色，1.5
-7   葡萄，紫色，2.00
-2024-10-30 10:54:54.459 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 10:54:54.459 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: tests/test_translated.md
-2024-10-30 10:54:54.461 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: tests/test_translated.md
-2024-10-30 18:19:29.378 | DEBUG    | __main__:translation:11 - [翻译任务]
-源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\ce56631c1d4039da25f2c2af02d5c0e427805aa1ecc9c7e462782b550e12e13a\test.pdf
-源语言: English
-目标语言: Chinese
-2024-10-30 18:19:29.526 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English
-alphabet at least once. Pangrams are often used to test fonts, keyboards, and other text-related
-tools. In addition to English, there are pangrams in many other languages. Some pangrams are more
-difficult to construct due to the unique characteristics of the language.
-Table Testing
-2024-10-30 18:19:29.534 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 18:19:40.040 | DEBUG    | book.content:set_translation:54 - [translation]
-[水果，颜色，价格（美元）] [苹果，红色，1.20] [香蕉，黄色，0.50] [橙子，橙色，0.80] [草莓，红色，2.50] [蓝莓，蓝色，3.00] [猕猴桃，绿色，1.00] [芒果，橙色，1.50] [葡萄，紫色，2.00]
-2024-10-30 18:19:40.046 | DEBUG    | book.content:set_translation:63 - [translated_df]
-  水果，颜色，价格（美元）
-0    苹果，红色，1.2
-1    香蕉，黄色，0.5
-2    橙子，橙色，0.8
-3    草莓，红色，2.5
-4    蓝莓，蓝色，3.0
-5   猕猴桃，绿色，1.0
-6    芒果，橙色，1.5
-7   葡萄，紫色，2.00
-2024-10-30 18:19:40.048 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 18:19:40.048 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\ce56631c1d4039da25f2c2af02d5c0e427805aa1ecc9c7e462782b550e12e13a\test_translated.md
-2024-10-30 18:19:40.050 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\ce56631c1d4039da25f2c2af02d5c0e427805aa1ecc9c7e462782b550e12e13a\test_translated.md
-2024-10-30 18:44:19.894 | DEBUG    | __main__:translation:22 - [input_file]
-<FileStorage: 'test.pdf' (None)>
-2024-10-30 18:44:19.894 | DEBUG    | __main__:translation:23 - [input_file.filename]
-test.pdf
-2024-10-30 18:44:19.894 | DEBUG    | __main__:translation:28 - [input_file_path]
-flask_temps/test.pdf
-2024-10-30 18:48:24.343 | DEBUG    | __main__:translation:22 - [input_file]
-<FileStorage: 'test.pdf' (None)>
-2024-10-30 18:48:24.343 | DEBUG    | __main__:translation:23 - [input_file.filename]
-test.pdf
-2024-10-30 18:48:24.343 | DEBUG    | __main__:translation:28 - [input_file_path]
-flask_temps/test.pdf
-2024-10-30 18:48:24.410 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English
-alphabet at least once. Pangrams are often used to test fonts, keyboards, and other text-related
-tools. In addition to English, there are pangrams in many other languages. Some pangrams are more
-difficult to construct due to the unique characteristics of the language.
-Table Testing
-2024-10-30 18:48:24.414 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 18:48:35.324 | DEBUG    | book.content:set_translation:54 - [translation]
-[果物、色、価格（USD）] [リンゴ、赤、1.20] [バナナ、黄色、0.50] [オレンジ、オレンジ、0.80] [イチゴ、赤、2.50] [ブルーベリー、青、3.00] [キウイ、緑、1.00] [マンゴー、オレンジ、1.50] [ブドウ、紫、2.00]
-2024-10-30 18:48:35.327 | DEBUG    | book.content:set_translation:63 - [translated_df]
-    果物、色、価格（USD）
-0      リンゴ、赤、1.2
-1     バナナ、黄色、0.5
-2  オレンジ、オレンジ、0.8
-3      イチゴ、赤、2.5
-4   ブルーベリー、青、3.0
-5      キウイ、緑、1.0
-6  マンゴー、オレンジ、1.5
-7     ブドウ、紫、2.00
-2024-10-30 18:48:35.327 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 18:48:35.327 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: flask_temps/test_translated.md
-2024-10-30 18:48:35.331 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: flask_temps/test_translated.md
-2024-10-30 18:48:35.331 | DEBUG    | __main__:translation:43 - D:\Data\Code\Course\GeekTime\LLM\openai-quickstart\langchain\openai-translator/flask_temps/test_translated.md
-2024-10-30 19:31:16.124 | DEBUG    | __main__:translation:11 - [翻译任务]
-源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\ce56631c1d4039da25f2c2af02d5c0e427805aa1ecc9c7e462782b550e12e13a\test.pdf
-源语言: English
-目标语言: Japanese
-2024-10-30 19:31:16.195 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English
-alphabet at least once. Pangrams are often used to test fonts, keyboards, and other text-related
-tools. In addition to English, there are pangrams in many other languages. Some pangrams are more
-difficult to construct due to the unique characteristics of the language.
-Table Testing
-2024-10-30 19:31:16.197 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 19:34:53.119 | DEBUG    | __main__:translation:11 - [翻译任务]
-源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\ce56631c1d4039da25f2c2af02d5c0e427805aa1ecc9c7e462782b550e12e13a\test.pdf
-源语言: English
-目标语言: Japanese
-2024-10-30 19:34:53.190 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-The quick brown fox jumps over the lazy dog. This pangram contains every letter of the English
-alphabet at least once. Pangrams are often used to test fonts, keyboards, and other text-related
-tools. In addition to English, there are pangrams in many other languages. Some pangrams are more
-difficult to construct due to the unique characteristics of the language.
-Table Testing
-2024-10-30 19:34:53.195 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 19:35:00.721 | DEBUG    | book.content:set_translation:56 - [translation]
-[果物, 色, 価格 (USD)] [リンゴ, 赤, 1.20] [バナナ, 黄, 0.50] [オレンジ, オレンジ, 0.80] [イチゴ, 赤, 2.50] [ブルーベリー, 青, 3.00] [キウイ, 緑, 1.00] [マンゴー, オレンジ, 1.50] [ぶどう, 紫, 2.00]
-2024-10-30 19:35:00.729 | DEBUG    | book.content:set_translation:65 - [translated_df]
-       果物     色 価格 (USD)
-0     リンゴ     赤      1.2
-1     バナナ     黄      0.5
-2    オレンジ  オレンジ      0.8
-3     イチゴ     赤      2.5
-4  ブルーベリー     青      3.0
-5     キウイ     緑      1.0
-6    マンゴー  オレンジ      1.5
-7     ぶどう     紫     2.00
-2024-10-30 19:35:00.729 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 19:35:00.732 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\ce56631c1d4039da25f2c2af02d5c0e427805aa1ecc9c7e462782b550e12e13a\test_translated.md
-2024-10-30 19:35:00.734 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\ce56631c1d4039da25f2c2af02d5c0e427805aa1ecc9c7e462782b550e12e13a\test_translated.md
-2024-10-30 21:15:54.292 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
-the importance of cherishing every fleeting moment.
-Table Testing
-2024-10-30 21:15:54.298 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 21:15:59.181 | DEBUG    | book.content:set_translation:55 - [translation]
-[水果, 颜色, 价格 (美元)] [苹果, 红色, 1.20] [香蕉, 黄色, 0.50] [橙子, 橙色, 0.80] [草莓, 红色, 2.50] [蓝莓, 蓝色, 3.00] [猕猴桃, 绿色, 1.00] [芒果, 橙色, 1.50] [葡萄, 紫色, 2.00]
-2024-10-30 21:15:59.181 | DEBUG    | book.content:set_translation:64 - [translated_df]
-    水果  颜色 价格 (美元)
-0   苹果  红色     1.2
-1   香蕉  黄色     0.5
-2   橙子  橙色     0.8
-3   草莓  红色     2.5
-4   蓝莓  蓝色     3.0
-5  猕猴桃  绿色     1.0
-6   芒果  橙色     1.5
-7   葡萄  紫色    2.00
-2024-10-30 21:15:59.181 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 21:15:59.181 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: tests/test_translated.md
-2024-10-30 21:15:59.188 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: tests/test_translated.md
-2024-10-30 21:16:59.924 | DEBUG    | __main__:translation:11 - [翻译任务]
+2024-11-05 20:10:11.788 | DEBUG    | __main__:translation:11 - [翻译任务]
 源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
 源语言: English
 目标语言: Chinese
 翻译风格: press_release
-2024-10-30 21:16:59.972 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
+模型: gpt-4o-mini
+提供商: openai
+2024-11-05 20:10:13.949 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
  Test Data
 This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
 These samples include a markdown table and an English text passage, which can be used to test an
@@ -188,9 +14,9 @@ Text testing
 While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
 the importance of cherishing every fleeting moment.
 Table Testing
-2024-10-30 21:16:59.976 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
+2024-11-05 20:10:13.956 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
 [Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 21:17:06.746 | DEBUG    | book.content:set_translation:55 - [translation]
+2024-11-05 20:10:21.297 | DEBUG    | book.content:set_translation:58 - [translation]
 新闻稿
 
 标题：新鲜水果价格一览
@@ -199,46 +25,69 @@ Table Testing
 
 我们很高兴地向您介绍我们最新的新鲜水果价格信息。以下是我们提供的水果种类、颜色及其价格（以美元计）：
 
-- 苹果：红色，价格 $1.20
-- 香蕉：黄色，价格 $0.50
-- 橙子：橙色，价格 $0.80
-- 草莓：红色，价格 $2.50
-- 蓝莓：蓝色，价格 $3.00
-- 猕猴桃：绿色，价格 $1.00
-- 芒果：橙色，价格 $1.50
-- 葡萄：紫色，价格 $2.00
+- 苹果：红色，价格 1.20 美元
+- 香蕉：黄色，价格 0.50 美元
+- 橙子：橙色，价格 0.80 美元
+- 草莓：红色，价格 2.50 美元
+- 蓝莓：蓝色，价格 3.00 美元
+- 猕猴桃：绿色，价格 1.00 美元
+- 芒果：橙色，价格 1.50 美元
+- 葡萄：紫色，价格 2.00 美元
 
 我们致力于为您提供新鲜、美味的水果，欢迎前来选购！
-2024-10-30 21:17:06.748 | DEBUG    | book.content:set_translation:64 - [translated_df]
-Empty DataFrame
-Columns: [闻稿
+2024-11-05 20:10:21.297 | ERROR    | book.content:set_translation:80 - An error occurred during table translation: Invalid table format
+2024-11-05 20:10:21.297 | DEBUG    | translator.writer:save_translated_book:18 - markdown
+2024-11-05 20:10:21.297 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:10:21.297 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:11:09.634 | DEBUG    | __main__:translation:11 - [翻译任务]
+源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
+源语言: English
+目标语言: Chinese
+翻译风格: press_release
+模型: gpt-4o-mini
+提供商: openai
+2024-11-05 20:11:11.664 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
+ Test Data
+This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
+These samples include a markdown table and an English text passage, which can be used to test an
+English-to-Chinese translation software supporting both text and table formats.
+Text testing
+While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
+the importance of cherishing every fleeting moment.
+Table Testing
+2024-11-05 20:11:11.668 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
+[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
+2024-11-05 20:11:17.243 | DEBUG    | book.content:set_translation:58 - [translation]
+新闻稿
 
 标题：新鲜水果价格一览
 
 日期：2023年10月
 
-我们很高兴地向您介绍我们最新的新鲜水果价格信息。以下是我们提供的水果种类、颜色及其价格（以美元计）：
+我们很高兴地向您介绍我们最新的水果价格信息。以下是我们提供的各种新鲜水果的详细信息：
 
-- 苹果：红色，价格 $1.20
-- 香蕉：黄色，价格 $0.50
-- 橙子：橙色，价格 $0.80
-- 草莓：红色，价格 $2.50
-- 蓝莓：蓝色，价格 $3.00
-- 猕猴桃：绿色，价格 $1.00
-- 芒果：橙色，价格 $1.50
-- 葡萄：紫色，价格 $2.00
+- 苹果：红色，价格为1.20美元
+- 香蕉：黄色，价格为0.50美元
+- 橙子：橙色，价格为0.80美元
+- 草莓：红色，价格为2.50美元
+- 蓝莓：蓝色，价格为3.00美元
+- 猕猴桃：绿色，价格为1.00美元
+- 芒果：橙色，价格为1.50美元
+- 葡萄：紫色，价格为2.00美元
 
-我们致力于为您提供新鲜、美味的水果，欢迎前来选购！]
-Index: []
-2024-10-30 21:17:06.753 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 21:17:06.753 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 21:17:06.754 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 21:20:12.679 | DEBUG    | __main__:translation:11 - [翻译任务]
+我们致力于为您提供最新鲜、最优质的水果，欢迎前来选购！
+2024-11-05 20:11:17.246 | ERROR    | book.content:set_translation:80 - An error occurred during table translation: Invalid table format
+2024-11-05 20:11:17.246 | DEBUG    | translator.writer:save_translated_book:18 - markdown
+2024-11-05 20:11:17.247 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:11:17.248 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:12:20.753 | DEBUG    | __main__:translation:11 - [翻译任务]
 源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
 源语言: English
 目标语言: Chinese
-翻译风格: casual
-2024-10-30 21:20:12.738 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
+翻译风格: academic
+模型: gpt-4o-mini
+提供商: openai
+2024-11-05 20:12:22.821 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
  Test Data
 This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
 These samples include a markdown table and an English text passage, which can be used to test an
@@ -247,97 +96,64 @@ Text testing
 While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
 the importance of cherishing every fleeting moment.
 Table Testing
-2024-10-30 21:20:12.744 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
+2024-11-05 20:12:22.821 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
 [Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 21:20:17.999 | DEBUG    | book.content:set_translation:55 - [translation]
+2024-11-05 20:12:29.587 | DEBUG    | book.content:set_translation:58 - [translation]
 [水果, 颜色, 价格 (美元)] [苹果, 红色, 1.20] [香蕉, 黄色, 0.50] [橙子, 橙色, 0.80] [草莓, 红色, 2.50] [蓝莓, 蓝色, 3.00] [猕猴桃, 绿色, 1.00] [芒果, 橙色, 1.50] [葡萄, 紫色, 2.00]
-2024-10-30 21:20:18.004 | DEBUG    | book.content:set_translation:64 - [translated_df]
+2024-11-05 20:12:29.591 | DEBUG    | book.content:set_translation:75 - [translated_df]
     水果  颜色 价格 (美元)
-0   苹果  红色     1.2
-1   香蕉  黄色     0.5
-2   橙子  橙色     0.8
-3   草莓  红色     2.5
-4   蓝莓  蓝色     3.0
-5  猕猴桃  绿色     1.0
-6   芒果  橙色     1.5
+0   苹果  红色    1.20
+1   香蕉  黄色    0.50
+2   橙子  橙色    0.80
+3   草莓  红色    2.50
+4   蓝莓  蓝色    3.00
+5  猕猴桃  绿色    1.00
+6   芒果  橙色    1.50
 7   葡萄  紫色    2.00
-2024-10-30 21:20:18.004 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 21:20:18.004 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 21:20:18.008 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 21:23:43.598 | DEBUG    | __main__:translation:23 - [input_file]
-<FileStorage: 'test.pdf' (None)>
-2024-10-30 21:23:43.598 | DEBUG    | __main__:translation:24 - [input_file.filename]
-test.pdf
-2024-10-30 21:23:43.608 | DEBUG    | __main__:translation:29 - [input_file_path]
-flask_temps/test.pdf
-2024-10-30 21:23:43.681 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
-the importance of cherishing every fleeting moment.
-Table Testing
-2024-10-30 21:23:43.689 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 21:23:47.913 | DEBUG    | book.content:set_translation:55 - [translation]
-[水果, 颜色, 价格 (美元)] [苹果, 红色, 1.20] [香蕉, 黄色, 0.50] [橙子, 橙色, 0.80] [草莓, 红色, 2.50] [蓝莓, 蓝色, 3.00] [猕猴桃, 绿色, 1.00] [芒果, 橙色, 1.50] [葡萄, 紫色, 2.00]
-2024-10-30 21:23:47.918 | DEBUG    | book.content:set_translation:64 - [translated_df]
-    水果  颜色 价格 (美元)
-0   苹果  红色     1.2
-1   香蕉  黄色     0.5
-2   橙子  橙色     0.8
-3   草莓  红色     2.5
-4   蓝莓  蓝色     3.0
-5  猕猴桃  绿色     1.0
-6   芒果  橙色     1.5
-7   葡萄  紫色    2.00
-2024-10-30 21:23:47.918 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 21:23:47.918 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: flask_temps/test_translated.md
-2024-10-30 21:23:47.918 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: flask_temps/test_translated.md
-2024-10-30 21:23:47.921 | DEBUG    | __main__:translation:46 - D:\Data\Code\Course\GeekTime\LLM\wyHomework\openai-translator-langchain/flask_temps/test_translated.md
-2024-10-30 21:24:55.544 | DEBUG    | __main__:translation:23 - [input_file]
-<FileStorage: 'test.pdf' (None)>
-2024-10-30 21:24:55.544 | DEBUG    | __main__:translation:24 - [input_file.filename]
-test.pdf
-2024-10-30 21:24:55.544 | DEBUG    | __main__:translation:29 - [input_file_path]
-flask_temps/test.pdf
-2024-10-30 21:24:55.658 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
-the importance of cherishing every fleeting moment.
-Table Testing
-2024-10-30 21:24:55.661 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 21:25:01.251 | DEBUG    | book.content:set_translation:55 - [translation]
-[水果, 颜色, 价格 (美元)] [苹果, 红色, 1.20] [香蕉, 黄色, 0.50] [橙子, 橙色, 0.80] [草莓, 红色, 2.50] [蓝莓, 蓝色, 3.00] [猕猴桃, 绿色, 1.00] [芒果, 橙色, 1.50] [葡萄, 紫色, 2.00]
-2024-10-30 21:25:01.251 | DEBUG    | book.content:set_translation:64 - [translated_df]
-    水果  颜色 价格 (美元)
-0   苹果  红色     1.2
-1   香蕉  黄色     0.5
-2   橙子  橙色     0.8
-3   草莓  红色     2.5
-4   蓝莓  蓝色     3.0
-5  猕猴桃  绿色     1.0
-6   芒果  橙色     1.5
-7   葡萄  紫色    2.00
-2024-10-30 21:25:01.251 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 21:25:01.251 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: flask_temps/test_translated.md
-2024-10-30 21:25:01.258 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: flask_temps/test_translated.md
-2024-10-30 21:25:01.258 | DEBUG    | __main__:translation:46 - D:\Data\Code\Course\GeekTime\LLM\wyHomework\openai-translator-langchain/flask_temps/test_translated.md
-2024-10-30 22:02:11.707 | DEBUG    | __main__:translation:11 - [翻译任务]
+2024-11-05 20:12:29.591 | DEBUG    | translator.writer:save_translated_book:18 - markdown
+2024-11-05 20:12:29.591 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:12:29.601 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:29:53.650 | DEBUG    | __main__:translation:11 - [翻译任务]
 源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
 源语言: English
 目标语言: Chinese
-翻译风格: standard
+翻译风格: press_release
+模型: gpt-4o-mini
+提供商: openai
+2024-11-05 20:29:55.633 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
+ Test Data
+This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
+These samples include a markdown table and an English text passage, which can be used to test an
+English-to-Chinese translation software supporting both text and table formats.
+Text testing
+While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
+the importance of cherishing every fleeting moment.
+Table Testing
+2024-11-05 20:29:55.651 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
+[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
+2024-11-05 20:30:01.383 | DEBUG    | book.content:set_translation:58 - [translation]
+[水果, 颜色, 价格 (美元)] [苹果, 红色, 1.20] [香蕉, 黄色, 0.50] [橙子, 橙色, 0.80] [草莓, 红色, 2.50] [蓝莓, 蓝色, 3.00] [猕猴桃, 绿色, 1.00] [芒果, 橙色, 1.50] [葡萄, 紫色, 2.00]
+2024-11-05 20:30:01.383 | DEBUG    | book.content:set_translation:75 - [translated_df]
+    水果  颜色 价格 (美元)
+0   苹果  红色    1.20
+1   香蕉  黄色    0.50
+2   橙子  橙色    0.80
+3   草莓  红色    2.50
+4   蓝莓  蓝色    3.00
+5  猕猴桃  绿色    1.00
+6   芒果  橙色    1.50
+7   葡萄  紫色    2.00
+2024-11-05 20:30:01.383 | DEBUG    | translator.writer:save_translated_book:18 - markdown
+2024-11-05 20:30:01.383 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:30:01.383 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:30:50.285 | DEBUG    | __main__:translation:11 - [翻译任务]
+源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
+源语言: English
+目标语言: Chinese
+翻译风格: press_release
 模型: glm-4
 提供商: zhipuai
-2024-10-30 22:02:11.808 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
+2024-11-05 20:30:50.369 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
  Test Data
 This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
 These samples include a markdown table and an English text passage, which can be used to test an
@@ -346,162 +162,20 @@ Text testing
 While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
 the importance of cherishing every fleeting moment.
 Table Testing
-2024-10-30 22:02:11.813 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
+2024-11-05 20:30:50.369 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
 [Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 22:02:19.588 | DEBUG    | book.content:set_translation:55 - [translation]
+2024-11-05 20:31:00.533 | DEBUG    | book.content:set_translation:58 - [translation]
 [水果，颜色，价格（美元）] [苹果，红色，1.20] [香蕉，黄色，0.50] [橙子，橙色，0.80] [草莓，红色，2.50] [蓝莓，蓝色，3.00] [奇异果，绿色，1.00] [芒果，橙色，1.50] [葡萄，紫色，2.00]
-2024-10-30 22:02:19.596 | DEBUG    | book.content:set_translation:64 - [translated_df]
-  水果，颜色，价格（美元）
-0    苹果，红色，1.2
-1    香蕉，黄色，0.5
-2    橙子，橙色，0.8
-3    草莓，红色，2.5
-4    蓝莓，蓝色，3.0
-5   奇异果，绿色，1.0
-6    芒果，橙色，1.5
-7   葡萄，紫色，2.00
-2024-10-30 22:02:19.597 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 22:02:19.597 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 22:02:19.598 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 22:05:16.314 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
-the importance of cherishing every fleeting moment.
-Table Testing
-2024-10-30 22:05:16.319 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 22:05:22.162 | DEBUG    | book.content:set_translation:55 - [translation]
-[水果, 颜色, 价格 (美元)] [苹果, 红色, 1.20] [香蕉, 黄色, 0.50] [橙子, 橙色, 0.80] [草莓, 红色, 2.50] [蓝莓, 蓝色, 3.00] [猕猴桃, 绿色, 1.00] [芒果, 橙色, 1.50] [葡萄, 紫色, 2.00]
-2024-10-30 22:05:22.162 | DEBUG    | book.content:set_translation:64 - [translated_df]
-    水果  颜色 价格 (美元)
-0   苹果  红色     1.2
-1   香蕉  黄色     0.5
-2   橙子  橙色     0.8
-3   草莓  红色     2.5
-4   蓝莓  蓝色     3.0
-5  猕猴桃  绿色     1.0
-6   芒果  橙色     1.5
-7   葡萄  紫色    2.00
-2024-10-30 22:05:22.167 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 22:05:22.167 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: tests/test_translated.md
-2024-10-30 22:05:22.167 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: tests/test_translated.md
-2024-10-30 22:08:38.203 | DEBUG    | __main__:translation:11 - [翻译任务]
-源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
-源语言: English
-目标语言: Chinese
-翻译风格: novel
-模型: glm-4
-提供商: zhipuai
-2024-10-30 22:08:38.296 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
-the importance of cherishing every fleeting moment.
-Table Testing
-2024-10-30 22:08:38.303 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 22:08:46.891 | DEBUG    | book.content:set_translation:55 - [translation]
-【水果，颜色，价格（美元）】
-【苹果，红色，1.20】
-【香蕉，黄色，0.50】
-【橙子，橙色，0.80】
-【草莓，红色，2.50】
-【蓝莓，蓝色，3.00】
-【奇异果，绿色，1.00】
-【芒果，橙色，1.50】
-【葡萄，紫色，2.00】
-2024-10-30 22:08:46.898 | DEBUG    | book.content:set_translation:64 - [translated_df]
-Empty DataFrame
-Columns: [水果，颜色，价格（美元）】
-【苹果，红色，1.20】
-【香蕉，黄色，0.50】
-【橙子，橙色，0.80】
-【草莓，红色，2.50】
-【蓝莓，蓝色，3.00】
-【奇异果，绿色，1.00】
-【芒果，橙色，1.50】
-【葡萄，紫色，2.00】]
-Index: []
-2024-10-30 22:08:46.900 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 22:08:46.900 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 22:08:46.900 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 22:13:19.532 | DEBUG    | __main__:translation:11 - [翻译任务]
-源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
-源语言: English
-目标语言: Chinese
-翻译风格: press_release
-模型: glm-4
-提供商: zhipuai
-2024-10-30 22:13:19.648 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
-the importance of cherishing every fleeting moment.
-Table Testing
-2024-10-30 22:13:19.658 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 22:13:30.305 | DEBUG    | book.content:set_translation:55 - [translation]
-【水果，颜色，价格（美元）】
-【苹果，红色，1.20美元】
-【香蕉，黄色，0.50美元】
-【橙子，橙色，0.80美元】
-【草莓，红色，2.50美元】
-【蓝莓，蓝色，3.00美元】
-【奇异果，绿色，1.00美元】
-【芒果，橙色，1.50美元】
-【葡萄，紫色，2.00美元】
-2024-10-30 22:13:30.307 | ERROR    | book.content:set_translation:77 - An error occurred during table translation: Invalid table format
-2024-10-30 22:13:30.307 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 22:13:30.307 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 22:13:30.307 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 22:20:40.658 | DEBUG    | __main__:translation:11 - [翻译任务]
-源文件: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test.pdf
-源语言: English
-目标语言: Chinese
-翻译风格: press_release
-模型: glm-4
-提供商: zhipuai
-2024-10-30 22:20:40.768 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
- Test Data
-This dataset contains two test samples provided by ChatGPT, an AI language model by OpenAI.
-These samples include a markdown table and an English text passage, which can be used to test an
-English-to-Chinese translation software supporting both text and table formats.
-Text testing
-While enjoying a quiet afternoon at the café, she contemplated the complexities of life and
-the importance of cherishing every fleeting moment.
-Table Testing
-2024-10-30 22:20:40.768 | DEBUG    | translator.pdf_parser:parse_pdf:54 - [table]
-[Fruit, Color, Price (USD)] [Apple, Red, 1.20] [Banana, Yellow, 0.50] [Orange, Orange, 0.80] [Strawberry, Red, 2.50] [Blueberry, Blue, 3.00] [Kiwi, Green, 1.00] [Mango, Orange, 1.50] [Grape, Purple, 2.00]
-2024-10-30 22:20:50.427 | DEBUG    | book.content:set_translation:58 - [translation]
-[水果，颜色，价格（美元）]
-[苹果，红色，1.20美元]
-[香蕉，黄色，0.50美元]
-[橙子，橙色，0.80美元]
-[草莓，红色，2.50美元]
-[蓝莓，蓝色，3.00美元]
-[奇异果，绿色，1.00美元]
-[芒果，橙色，1.50美元]
-[葡萄，紫色，2.00美元]
-2024-10-30 22:20:50.432 | DEBUG    | book.content:set_translation:75 - [translated_df]
-    水果  颜色  价格（美元）
-0   苹果  红色  1.20美元
-1   香蕉  黄色  0.50美元
-2   橙子  橙色  0.80美元
-3   草莓  红色  2.50美元
-4   蓝莓  蓝色  3.00美元
-5  奇异果  绿色  1.00美元
-6   芒果  橙色  1.50美元
-7   葡萄  紫色  2.00美元
-2024-10-30 22:20:50.432 | DEBUG    | translator.writer:save_translated_book:18 - markdown
-2024-10-30 22:20:50.433 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
-2024-10-30 22:20:50.434 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:31:00.540 | DEBUG    | book.content:set_translation:75 - [translated_df]
+    水果  颜色 价格（美元）
+0   苹果  红色   1.20
+1   香蕉  黄色   0.50
+2   橙子  橙色   0.80
+3   草莓  红色   2.50
+4   蓝莓  蓝色   3.00
+5  奇异果  绿色   1.00
+6   芒果  橙色   1.50
+7   葡萄  紫色   2.00
+2024-11-05 20:31:00.540 | DEBUG    | translator.writer:save_translated_book:18 - markdown
+2024-11-05 20:31:00.540 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md
+2024-11-05 20:31:00.540 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\Oceanus\AppData\Local\Temp\gradio\f5676b798d189767cfe79b02efcb16642d43143e9ac0d5c3490d4e50ef55b45e\test_translated.md

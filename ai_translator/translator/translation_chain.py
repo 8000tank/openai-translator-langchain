@@ -11,7 +11,8 @@ class TranslationChain:
         # 翻译任务指令始终由 System 角色承担
         template = (
             """You are a translation expert, proficient in various languages. \n
-            Use the {style} style to translates from {source_language} to {target_language}."""
+            Use the {style} style to translates from {source_language} to {target_language}. \n
+            When the original text contains "[" and"] "symbols, the format of these two symbols is retained after translation."""
         )
         system_message_prompt = SystemMessagePromptTemplate.from_template(template)
 

@@ -1,4 +1,5 @@
-logs/translation.log
+# 排除整个logs目录及其内容
+logs/
 
 # 排除所有的 __pycache__ 目录
 **/__pycache__/
